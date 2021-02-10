@@ -1,0 +1,4 @@
+
+OrangeEchoJS Kernel's creator: `Orange Group#5362`
+
+**You can check my kernel's source code here**: https://github.com/OrangeEcho-Devs/OrangeEchoJS-Kernel
