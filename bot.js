@@ -61,6 +61,19 @@ if (fs.existsSync(`./shutdown.flag`)){
 		}
 
 }
+errorlog = function (error){
+	errorcount = errorcount + 1
+	const ErrorReportEmbed = new Discord.MessageEmbed()
+		ErrorReportEmbed.setColor('#FF0000')
+		ErrorReportEmbed.setTitle('Bot Error')
+		ErrorReportEmbed.setDescription(`An error has occurred while the bot running.`)
+		ErrorReportEmbed.addFields(
+			{ name: 'Error information', value: `${error}`, inline: false },
+		)
+		ErrorReportEmbed.setTimestamp()
+		const ErrorLog = client.channels.cache.get(`${BotLog}`);
+		ErrorLog.send(ErrorReportEmbed)
+}
 
 //Footer text
 const footertexthandling = require('./modules/footertext/footerText.js')
